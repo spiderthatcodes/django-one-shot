@@ -28,7 +28,11 @@
                 <tbody>
                     {% for task in todos.items.all %}
                     <tr>
-                        <td>{{ task.task }}</td>
+                        <td>
+                            <a href="{% url 'todo_item_update' task.id %}">
+                                {{ task.task }}
+                            </a>
+                        </td>
                         <td>{{ task.due_date | date:'F j, Y' }}</td>
                     </tr>
                     {% endfor %}
