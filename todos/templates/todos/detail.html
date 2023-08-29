@@ -4,13 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>{{ todos.name }}</title>
 </head>
 
 <body>
     <main>
         <div>
             <h1>{{ todos.name }}</h1>
+            <p>
+                <a href="{% url 'todo_list_update' todos.id %}">Edit</a>
+            </p>
             <h2>Tasks</h2>
             <table>
                 <thead>
