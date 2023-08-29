@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Lists</title>
+</head>
+
+<body>
+    <main>
+        <div>
+            <h1>My Lists</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Number of items</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for list in todo_list %}
+                    <tr>
+                        <td>{{list.name}}</td>
+                        <td></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+
+</html>
