@@ -23,8 +23,8 @@ def todo_list_create(request):
     if request.method == 'POST':
         form = TodoForm(request.POST)
         if form.is_valid():
-            form.save()
-            return redirect('todo_list_list')
+            list = form.save()
+            return redirect('todo_list_detail', id=list.id)
     else:
         form = TodoForm()
 
